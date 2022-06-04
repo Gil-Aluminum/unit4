@@ -9,9 +9,10 @@ const ul = phraseDiv.querySelector("ul");
     constructor(phrase){
         this.phrase = phrase.toLowerCase();
     }
-/**
- * Display phrase on game board
- */
+    
+    /**
+     * Display phrase on game board
+     */
     addPhraseToDisplay() {
         ul.innerHTML = "";
         let phraseLetters = this.phrase.split(""); //phraseLetters is an array of all the letters in the phrase
@@ -27,7 +28,6 @@ const ul = phraseDiv.querySelector("ul");
 
     checkLetter(){
         if (this.phrase.includes(letter)) {
-            this.showMatchedLetter(letter);
             return true;
         } else {
             return false;
